@@ -1,0 +1,44 @@
+.about {
+    @include mBottom(100px, 186px, $mobile-sm, $tablets, 186px);
+    @include mTop(100px, 172px, $mobile-sm, $tablets, 172px);
+
+    &__container {
+        max-width: 1132px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        @include mobile{
+            grid-template-columns: 1fr ;
+        }
+    }
+
+
+    &__title {
+
+    }
+
+    &__appellation {
+        margin-bottom: 16px;
+    }
+
+    &__description {
+   max-width: 375px;
+        @include tablets{
+            max-width: inherit;
+        }
+    }
+
+    &__content {
+        @include pLeft(30px, 87px, $mobile-sm, $tablets, 87px);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-left: 1px solid getcolor(about,border);
+
+        @include mobile{
+            border-left: 0;
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+}

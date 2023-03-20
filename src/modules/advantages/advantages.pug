@@ -1,0 +1,34 @@
+-
+    const itemArrow = [
+        {
+            logo: 'images/advantages__logo.svg',
+            appellation: "98% Success Rate",
+            description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer",
+            link: "#"
+        },
+        {
+            logo: 'images/advantages__logo.svg',
+            appellation: "100% Success Rate",
+            description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer",
+            link: "#"
+        },
+        {
+            logo: 'images/advantages__logo.svg',
+            appellation: "100% Success Rate",
+            description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer",
+            link: "#"
+        },
+
+
+    ]
+section.advantages
+       .container
+           h2.advantages__title.title.wow.fadeInUp Why Choose us?
+           .advantages-list
+               each item in itemArrow
+                   .advantages-list__item
+                       .advantages-list__logo
+                           img(alt="", src= item.logo)
+                       h3.advantages-list__appellation.appellation= item.appellation
+                       .advantages-list__description.description= item.description
+                       a(href= item.link).advantages-list__view-button Read More

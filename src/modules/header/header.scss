@@ -1,0 +1,236 @@
+.header {
+    background: getcolor(header, background);
+    @include minHeight(200px, 803px, $mobile-sm, $tablets, 803px);
+
+    box-sizing: border-box;
+    padding-top: 53px;
+    padding-bottom: 53px;
+
+    &__block-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header-nav {
+            @include tabletsPadMini {
+                display: none;
+            }
+        }
+
+    }
+
+    &-nav {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        @include tabletsPadMini {
+            margin-top: 20px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+
+        &__item {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 162.52%;
+            /* identical to box height, or 26px */
+            text-align: center;
+
+
+            &_active {
+                font-weight: 400;
+            }
+
+
+        }
+    }
+
+
+    &-logo {
+        background: url("../images/logo.svg");
+        width: 143px;
+        height: 31px;
+    }
+
+    &-contact-now {
+        font-style: normal;
+        font-weight: 600;
+        @include fluidFontSize(14px, 16px, $mobile-sm, $tablets, 16px);
+        line-height: 19px;
+        text-align: center;
+
+        @include pTop(7px, 14px, $mobile-sm, $tablets, 14px);
+        @include pBottom(7px, 14px, $mobile-sm, $tablets, 14px);
+        @include pLeft(15px, 35px, $mobile-sm, $tablets, 35px);
+        @include pRight(15px, 35px, $mobile-sm, $tablets, 35px);
+        border: 2px solid getcolor(base, light);
+
+    }
+
+    &-social-items {
+        display: flex;
+        gap: 23px;
+        margin-left: auto;
+
+        @each $class, $img in (inst, sc-1), (fb, sc-2), (tw, sc-3), (rt, sc-4) {
+            &__#{$class} {
+                background: url('../images/#{$img}.svg');
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+
+        @include tabletsPadMini {
+            margin-top: 25px;
+            margin-left: inherit;
+        }
+
+        @include mobile {
+            margin-top: 25px;
+        }
+
+    }
+
+    &-person {
+        display: grid;
+        grid-template-columns:  minmax(auto, 571px) auto;
+        @include gridGap(23px, 93px, $mobile-sm, $tablets, 93px);
+        @include mTop(40px, 72px, $mobile-sm, $tablets, 72px);
+        @include mobile {
+
+        }
+        align-items: center;
+        @include tabletsPadMini {
+            grid-template-columns:  minmax(auto, 451px) 1fr;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            justify-content: center;
+            grid-template-areas:
+         "foto"
+        "content";
+
+        }
+        grid-template-areas:
+       "content foto";
+
+
+        &__content {
+            grid-area: content;
+        }
+
+        &__foto {
+            grid-area: foto;
+            @include mobile {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 60%;
+            }
+        }
+
+
+        &__title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 66px;
+            @include fluidFontSize(35px, 66px, $mobile-sm, $tablets, 66px);
+            @include mBottom(26px, 36px, $mobile-sm, $tablets, 36px);
+            line-height: 147.52%;
+
+            strong {
+                font-weight: 700;
+                display: block;
+            }
+        }
+
+        &__description {
+            @include fluidFontSize(14px, 18px, $mobile-sm, $tablets, 18px);
+            @include mobile {
+                text-align: center;
+            }
+        }
+
+
+
+
+    }
+    &-form-talk {
+
+        min-height: 74px;
+        max-width: 440px;
+        margin-top: 36px;
+        @include tabletsPadMini{
+            max-width: inherit;
+        }
+
+
+
+          &__row{
+              display: flex;      border-radius:$radiusFormTalk;
+              background: getcolor(base,extralight1);
+              justify-content: space-between;
+              align-items: center;
+              padding: 6px;
+              box-sizing: border-box;
+
+             position: relative;
+              &:before{
+                  display: inline-block;
+                  content: "";
+                  background: url("../images/talk-form-message.svg") no-repeat;
+                  height: 22px;
+                  width: 22px;
+                  vertical-align: middle;
+                  margin-left: 22px;
+                  opacity: 0.1;
+                  margin-right: 12px;
+              }
+          }
+
+
+
+        &__input {
+            background: transparent;
+            border: none;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 162.52%;
+            padding-right: 20px;
+            color: getcolor(base,light);
+
+
+            @include mobile-port{
+                width: 140px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+        }
+
+        &__submit {
+            margin-left: auto;
+
+            @include minHeight(42px, 62px, $mobile-sm, $tablets, 62px);
+            background: getcolor(base,yellow);
+            padding-left: 32px;
+         border: 0;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 162.52%;
+            color: getcolor(base,black);
+            padding-right: 32px; border-radius:$radiusFormTalk;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.practices {
+    @include mBottom(100px, 186px, $mobile-sm, $tablets, 186px);
+
+    &__title {
+        @include mBottom(30px, 65px, $mobile-sm, $tablets, 65px);
+        text-align: center;
+    }
+
+    &-portfolio {
+        display: grid;
+        grid-template-areas:
+            'num0 num0 num1'
+            'num2 num3 num3'
+            'num4 num4 num5';
+        grid-gap: 20px;
+
+        @include mobile {
+            grid-template-areas:
+            'num0 num0'
+            'num3 num3'
+            'num4  num4'
+            'num2  num2'
+            'num1  num1'
+            'num5 num5';
+        }
+
+        @include mobile {
+
+        }
+
+        &__item {
+            position: relative;
+            width: 100%;
+            min-height: 342px;
+             border-radius:$radius ;
+            @include minHeight(200px, 342px, $mobile-sm, $tablets, 342px);
+            &:before {
+
+                background: rgba(0, 0, 0, 0.4);
+                border-radius: $radius;
+
+                box-sizing: border-box;
+                content: "";
+                height: 100%;
+                position: absolute;
+                width: 100%;
+                z-index: 1;
+            }
+
+
+            &_num-0 {
+                grid-area: num0;
+                background: url("../images/practices-portfolio__foto0.jpg") no-repeat;
+                background-size: cover;
+            }
+
+            &_num-1 {
+                grid-area: num1;
+                background: url("../images/practices-portfolio__foto1.jpg") no-repeat;
+                background-size: cover;
+            }
+
+
+            &_num-2 {
+                grid-area: num2;
+                background: url("../images/practices-portfolio__foto2.jpg") no-repeat;
+                background-size: cover;
+            }
+
+            &_num-3 {
+                grid-area: num3;
+                background: url("../images/practices-portfolio__foto3.jpg") no-repeat;
+                background-size: cover;
+            }
+
+
+            &_num-4 {
+                grid-area: num4;
+                background: url("../images/practices-portfolio__foto4.jpg") no-repeat;
+                background-size: cover;
+            }
+
+            &_num-5 {
+                grid-area: num5;
+                background: url("../images/practices-portfolio__foto5.jpg") no-repeat;
+                background-size: cover;
+            }
+        }
+
+
+        &__foto {
+            display: block;
+            border-radius: $radius;
+
+
+        }
+
+        &__appellation {
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            z-index: 2;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+    }
+
+
+}

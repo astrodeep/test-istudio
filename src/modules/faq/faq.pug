@@ -1,0 +1,32 @@
+-
+    const itemFaq = [
+        {
+            appellation: "Do I need a personal injury report?",
+            description: "Amet minim mollit non deserunt ullamco est sit  aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer"
+        },
+        {
+            appellation: "How much is my case worth?",
+            description: "Amet minim mollit non deserunt ullamco est sit  aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer"
+        },
+        {
+            appellation: "What should I do right after car accidect",
+            description: "Amet minim mollit non deserunt ullamco est sit  aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer"
+        },
+        {
+            appellation: "How much is my case worth?",
+            description: "Amet minim mollit non deserunt ullamco est sit  aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer"
+        },
+
+    ]
+
+
+section.faq
+    .container
+        h2.faq__title.title.wow.fadeInDown faq
+        .faq__row
+            .faq__description.description Amet minim mollit non deserunt ullamco est sit  aliqua dolor do amet sint.
+            .faq-article
+                each item in itemFaq
+                    article.faq-article__item
+                        h3.faq-article__appellation.appellation= item.appellation
+                        p.faq-article__description.description= item.description

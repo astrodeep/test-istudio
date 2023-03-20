@@ -1,0 +1,50 @@
+-
+    const itemTeam = [
+        {
+            foto: 'images/team-list__foto1.jpg',
+            appellation: "Danial Def",
+            cases: "101 Cases",
+
+        },
+        {
+            foto: 'images/team-list__foto2.jpg',
+            appellation: "Sanfole",
+            cases: "201 Cases",
+
+        },
+        {
+            foto: 'images/team-list__foto3.jpg',
+            appellation: "Cesforila",
+            cases: "301 Cases",
+
+        },
+        {
+            foto: 'images/team-list__foto4.jpg',
+            appellation: "Colleen",
+            cases: "401 Cases",
+
+        },
+        {
+            foto: 'images/team-list__foto5.jpg',
+            appellation: "Haldone",
+            cases: "201 Cases",
+
+        },
+        {
+            foto: 'images/team-list__foto6.jpg',
+            appellation: "Nik Jeo",
+            cases: "101 Cases",
+
+        },
+
+    ]
+section.team
+    .team__container.container
+        h2.team__title.title.wow.bounceIn Our Team
+        .team-list
+            each item in itemTeam
+                .team-list__item
+                    img.team-list__foto(src= item.foto, alt="")
+                    div
+                        .team-list__appellation.appellation= item.appellation
+                        .team-list__cases= item.cases

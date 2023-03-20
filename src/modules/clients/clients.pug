@@ -1,0 +1,45 @@
+-
+    const itemClients= [
+        {
+            logo: 'images/clients-list__photo1.jpg',
+            appellation: "Jane Cooper",
+            function: "Ceo of Hunt",
+            description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer. sitaliqua dolor do amet sint. Velit officia",
+        },
+        {
+            logo: 'images/clients-list__photo2.jpg',
+            appellation: "Devon Lane",
+            function: "Ceo of Hunt",
+            description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer. sitaliqua dolor do amet sint. Velit officia",
+        },
+        {
+            logo: 'images/clients-list__photo3.jpg',
+            appellation: "Robert Fox",
+            function: "Ceo of Hunt",
+            description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer. sitaliqua dolor do amet sint. Velit officia",
+        },
+        {
+            logo: 'images/clients-list__photo3.jpg',
+            appellation: "Robert Fox",
+            function: "Ceo of Hunt",
+            description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer. sitaliqua dolor do amet sint. Velit officia",
+        },
+    ]
+
+section.clients
+    .container
+
+        .clients__row
+            h2.title.wow.bounceIn What says our  happy Clients
+            .clients__slider-arrow
+
+                .clients__slider-prev
+                .clients__slider-next
+
+        .clients-list
+                each item in itemClients
+                    .clients-list__item
+                        img.clients-list__logo(src= item.logo, alt="")
+                        .clients-list__appellation.appellation= item.appellation
+                        .clients-list__function= item.function
+                        .clients-list__description.description= item.description

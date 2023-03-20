@@ -1,0 +1,62 @@
+//font
+$font-base: 'Inter', sans-serif;
+/* Colors */
+$colors: (
+    base: (
+        bodyBackground: #CE90F2,
+        light: #FFFFFF,
+        extralight: rgba(255, 255, 255, 0.3),
+        extralight2: rgba(255, 255, 255, 0.2),
+        extralight1: rgba(255, 255, 255, 0.1),
+        yellow:#E3B748,
+        black: #000000,
+        blackSoft: rgba(0, 0, 0, 0.4),
+        gray: #2E2E2E,
+        borderCard:rgba(255, 255, 255, 0.1)
+    ),
+    main: (
+        background: #1E1E1E
+    ),
+    header: (
+        background: #111111
+    ),
+    footer: (
+        background: #171717
+    ),
+    clients: (
+        buttonBackround: #E6E6E6
+    ),
+
+    faq: (
+        border:  rgba(255, 255, 255, 0.05),
+    ),
+    advantages: (
+        border: rgba(255, 255, 255, 0.1),
+        itemBackground:#1D1D1D,
+        itemBackgroundHover: #2E2E2E
+),
+    about: (
+        border: #6A6A6A
+    ),
+
+    team: (
+        appellationHover: #373737,
+
+
+    ),
+
+    subscribe: (
+        background: rgba(71, 71, 71, 0.5),
+        formPlaceholder:#818181,
+
+    ),
+);
+$mobile: 767px;
+$mobile-sm: 375px;
+$tablets: 1367px;
+$tabletsPad: 1160px;
+$tabletsPadMini: 991px;
+$radius: 14px;
+$radiusFormTalk: 43px;
+$radius-circle: 500px;
+$mobile-port: 500px;

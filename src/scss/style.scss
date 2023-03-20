@@ -1,0 +1,20 @@
+///base
+@import 'src/scss/utils/fonts';
+@import 'src/scss/utils/reset';
+@import 'src/scss/utils/mixin';
+@import 'src/scss/utils/functions';
+@import 'src/scss/utils/variables';
+@import 'src/scss/base/base';
+
+
+/// modules
+@import '~slick-carousel/slick/slick';
+@import 'src/modules/header/header';
+@import 'src/modules/about/about';
+@import 'src/modules/advantages/advantages';
+@import 'src/modules/practices/practices';
+@import 'src/modules/clients/clients';
+@import 'src/modules/team/team';
+@import 'src/modules/faq/faq';
+@import 'src/modules/subscribe/subscribe';
+@import 'src/modules/footer/footer';

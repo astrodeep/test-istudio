@@ -1,0 +1,98 @@
+.advantages {
+    @include mBottom(100px, 186px, $mobile-sm, $tablets, 186px);
+
+    &__title {
+        @include mBottom(30px, 97px, $mobile-sm, $tablets, 97px);
+        text-align: center;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 31px;
+
+        @include tabletsPadMini{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mobile {
+            grid-template-columns:1fr;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__item {
+            padding: 28px 43px 36px 23px;
+            border: 1.4px solid getcolor(advantages, border);
+            background: getcolor(advantages, itemBackground);
+            border-radius: $radius;
+
+            @include tabletsPadMini{
+               &:last-child{
+                      grid-column: 1 / span 2;
+               }
+            }
+            @include mobile{
+                &:last-child{
+                    grid-column: inherit;
+                }
+
+            }
+
+
+            &:hover {
+                transition: 0.4s linear;
+                background: getcolor(advantages, itemBackgroundHover);
+            }
+        }
+
+        &__logo {
+            width: 101px;
+            height: 101px;
+            border-radius: $radius-circle;
+            display: flex;
+            justify-content: center;
+            background: getcolor(base, light);
+            margin-bottom: 28px;
+            align-items: center;
+            transition: 0.2s linear;
+
+
+            @include tabletsPadMini{
+                width: 90px;
+                height:90px;
+            }
+
+            @include mobile{
+                width: 80px;
+                height:80px;
+            }
+        }
+
+        &__appellation {
+            margin-bottom: 26px;
+            margin-top: 28px;
+        }
+
+        &__description {
+            margin-bottom: 22px;
+        }
+
+        &__view-button {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 162.52%;
+
+            box-sizing: border-box;
+            padding: 10px 24px 10px 24px;
+            color: getcolor(base, black);
+            align-items: center;
+            justify-content: center;
+            border-radius: 23.5px;
+            background: getcolor(base, yellow);
+
+
+
+        }
+    }
+}

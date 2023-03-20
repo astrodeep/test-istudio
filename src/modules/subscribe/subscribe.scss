@@ -1,0 +1,73 @@
+.subscribe {
+    @include  mBottom(100px, 242px, $mobile-sm, $tablets, 242px);
+
+    &__container{
+        max-width: 1245px;
+        background: getcolor(subscribe,background);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        @include  minHeight(150px, 356px, $mobile-sm, $tablets, 356px);
+        @include mobile{
+          padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    &__title{
+        @include  mBottom(30px, 42px, $mobile-sm, $tablets, 42px);
+         margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    &-form {
+        &__row{
+          display: grid;
+            grid-gap: 9px;
+          grid-template-columns: minmax(auto, 276px) minmax(auto, 276px) minmax(auto, 116px);
+               @include mobile{
+                   grid-template-columns: 1fr;
+               }
+        }
+        &__input {
+            min-height: 53px;
+            box-sizing: border-box;
+            padding-left: 23px;
+            border: none;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 137%;
+            &_border{
+                border-radius: 8px 0 0 8px;
+                @include mobile{
+                    border-radius:0;
+                }
+            }
+
+            &::placeholder {
+                color: getcolor(subscribe,formPlaceholder );
+                transition: all 0.3s ease;
+            }
+
+        }
+
+        &__submit {
+            border-radius: 0 8px 8px 0;
+            background: getcolor(base, yellow);
+           border: none;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            min-height: 53px;
+            line-height: 137%;
+            color: getcolor(base, black);
+            @include mobile{
+                border-radius: 0;
+            }
+
+        }
+    }
+}

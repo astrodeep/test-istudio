@@ -1,0 +1,83 @@
+.faq {
+    @include mBottom(100px, 215px, $mobile-sm, $tablets, 215px);
+
+    &__title {
+        margin-bottom: 14px;
+        text-transform: uppercase;
+    }
+
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include  gridGap(40px, 80px, $mobile-sm, $tablets, 80px);
+        @include tabletsPadMini{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__description {
+        font-size: 18px;
+        @include mobile{
+            text-align: center;
+        }
+    }
+
+    &-article {
+
+        &__item {
+            position: relative;
+            @include pBottom(20px, 40px, $mobile-sm, $tablets, 40px);
+            @include pTop(20px, 40px, $mobile-sm, $tablets, 40px);
+            border-bottom: 2px solid getcolor(faq, border);
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+
+
+        &__appellation {
+            cursor: pointer;
+            position: relative;
+            padding-right: 38px;
+
+            &:after {
+                width: 28px;
+                height: 28px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: $radius-circle;
+                content: '+';
+                background: getcolor(base, yellow);
+                vertical-align: middle;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                line-height: 22px;
+                color: getcolor(base, black);
+            }
+
+            &.active{
+                &:after{
+                    display: none;
+                }
+            }
+
+        }
+
+        &__description {
+            display: none;
+            @include pTop(20px, 40px, $mobile-sm, $tablets, 40px);
+        }
+    }
+
+}

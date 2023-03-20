@@ -1,0 +1,137 @@
+.clients {
+    @include mBottom(100px, 186px, $mobile-sm, $tablets, 186px);
+
+    &__row {
+        display: grid;
+        grid-template-columns: minmax(auto, 375px) auto;
+        @include mBottom(50px, 100px, $mobile-sm, $tablets, 100px);
+        @include mobile{
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+    &-list {
+        .slick-track {
+            display: flex;
+            gap: 31px;
+        }
+
+        &__item {
+            padding: 28px 43px 36px 23px;
+            border: 1.4px solid getcolor(advantages, border);
+            background: getcolor(advantages, itemBackground);
+            border-radius: $radius;
+            position: relative;
+            &:after{
+                position: absolute;
+                content: "";
+                background: url("../images/clients-before-arrow.svg");
+                width: 63px;
+                height: 46px;
+                right: 40px;
+                top: 28px;
+
+            }
+            &:hover {
+                transition: 0.4s linear;
+                background: getcolor(advantages, itemBackgroundHover);
+
+                &:after{
+                 display: none;
+
+                }
+
+            }
+        }
+
+        &__logo {
+            border-radius: $radius-circle;
+            transition: 0.2s linear;
+            @include mobile {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        &__appellation {
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        &__function {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: getcolor(base, light);
+        }
+
+        &__description {
+            margin-top: 22px;
+        }
+
+    }
+
+    &__slider-arrow {
+        display: flex;
+        gap: 18px;
+        margin-left: auto;
+        margin-top: auto;
+
+        @include mobile{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+
+        }
+
+    }
+
+    &__slider-next, &__slider-prev {
+        width: 90px;
+        height: 90px;
+        border-radius: $radius-circle;
+        cursor: pointer;
+
+        @include tabletsPadMini{
+            width: 70px;
+            height: 70px;
+
+        }
+
+
+        @include mobile{
+            width: 50px;
+            height: 50px;
+
+        }
+
+    }
+
+
+    &__slider-next {
+        background: getcolor(clients, buttonBackround) url("../images/clients-arrow_none-active.svg") center center no-repeat;
+        transform: rotate(-180deg);
+        transition: 0.2s linear;
+
+        &:hover {
+            background: getcolor(base, yellow) url("../images/clients-arrow_active.svg") center center no-repeat;
+            transform: rotate(360deg);
+        }
+
+    }
+
+    &__slider-prev {
+        background: getcolor(clients, buttonBackround) url("../images/clients-arrow_none-active.svg") center center no-repeat;
+        transition: 0.2s linear;
+
+        &:hover {
+            background: getcolor(base, yellow) url("../images/clients-arrow_active.svg") center center no-repeat;
+            transform: rotate(180deg);
+        }
+
+    }
+
+
+}
