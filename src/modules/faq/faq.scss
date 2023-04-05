@@ -67,6 +67,7 @@
             }
 
             &.active{
+                @include pBottom(20px, 40px, $mobile-sm, $tablets, 40px);
                 &:after{
                     display: none;
                 }
@@ -75,8 +76,12 @@
         }
 
         &__description {
-            display: none;
-            @include pTop(20px, 40px, $mobile-sm, $tablets, 40px);
+
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+
+
         }
     }
 
