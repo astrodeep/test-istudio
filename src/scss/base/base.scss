@@ -1,81 +1,90 @@
-html,
-body {
+html, body {
     height: 100%;
-    font-family: $font-base;
-    color: getcolor(base, light);
+    font-family:$font-base;
+    color: getcolor(base,light);
 }
 
-body {
+
+body{
     display: flex;
     flex-direction: column;
     height: 100%;
     background: getcolor(base, bodyBackground);
 }
 
-%wrapper {
+
+
+%wrapper{
     max-width: 1440px;
     margin: 0 auto;
     overflow: hidden;
     width: 100%;
+
 }
 
-.container {
+.container{
     max-width: 1140px;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
-    @include tabletsPad {
+    @include tabletsPad{
         width: 100%;
         max-width: 100%;
         padding-left: 20px;
         padding-right: 20px;
     }
+
 }
 
-.header {
+
+.header{
     /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
-    flex: 0 0 auto;
-    @extend %wrapper;
-    background: getcolor(header, background);
+    flex: 0 0 auto;@extend %wrapper;
+    background: getcolor(header,background);
     word-break: break-word;
 }
-.main-content {
+.main-content{
     /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
-    flex: 1 0 auto;
-    @extend %wrapper;
-    background: getcolor(main, background);
+    flex: 1 0 auto;  @extend %wrapper;
+    background: getcolor(main,background);
     word-break: break-word;
 }
-.footer {
+.footer{
     /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
-    flex: 0 0 auto;
-    @extend %wrapper;
+    flex: 0 0 auto;@extend %wrapper;
     word-break: break-word;
-    background: getcolor(footer, background);
+    background: getcolor(footer,background)
 }
 
-.title {
+.title{
     font-style: normal;
     font-weight: 600;
     @include fluidFontSize(30px, 54px, $mobile-sm, $tablets, 54px);
     line-height: 143.02%;
-    @include mobile {
+    @include mobile{
         text-align: center;
     }
+
 }
 
-.appellation {
+
+.appellation{
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
-    @include fluidFontSize(20px, 24px, $mobile-sm, $tablets, 24px);
-    color: getcolor(base, light);
+     @include fluidFontSize(20px, 24px, $mobile-sm, $tablets, 24px);
+    color:  getcolor(base,light);
 }
 
-.description {
+
+
+
+
+.description{
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 162.52%;
-    color: getcolor(base, extralight);
+    color:  getcolor(base,extralight);
 }
+
